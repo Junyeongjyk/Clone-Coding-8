@@ -1,0 +1,37 @@
+/* Reset */
+* {margin: 0;padding: 0;}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, tbody, tfoot, thead, tr, th, td{margin:0;padding:0;}
+a {color: inherit; text-decoration: inherit;}
+li {list-style: none;}
+address, em, i {font-style: normal;}
+button {background: none; border: none;}
+img {vertical-align: middle;}
+
+
+/* layout */
+.slide-wrap {margin: 0 auto; position: relative;}
+
+/* 공통 슬라이드 */
+.swiper-slide {width: 100%; overflow: hidden; position: relative; background-color: #000;}
+.swiper-slide img {width: 100%;}
+
+/* 메인슬라이더 효과 */
+.slider img {transform: translateY(-20px); transition: all 0.5s; opacity: 0;}
+.slider .swiper-slide-active img {transform: translateY(0); opacity: 1;}
+
+/* laptop */
+.slide-wrap .laptop {width: 46%; position: absolute; transform: translateY(-50%); z-index: 1; top: 92%; left: 27%;}
+.slide-wrap .laptop img {width: 100%;}
+
+/* 썸네일 슬라이드 위치 */
+.slide-wrap .slider-thumbnail {height: 79%; width: 35%; position: absolute; left: 50%; top: 45%; border-radius: 5%; transform: translateX(-50%);}
+
+/* 텍스트 */
+.slide-wrap .slider-thumbnail .textBox {color: #fff; position: absolute; font-size: 50px; left: 50%; top: 60%; transform: translate(-50%, -50%); opacity: 0; transition: all 0.5s;}
+.slide-wrap .slider-thumbnail .swiper-slide-active .textBox {opacity: 1; top: 50%;}
+
+
+/* 버튼 */
+.swiper-button-next, .swiper-button-prev {z-index: 20; width: 50px; height: 30px; background: url(../img/btn.png) no-repeat center/50px; top: 85%; cursor: pointer;}
+.swiper-button-next {right: 25%; transform: rotate(180deg);}
+.swiper-button-prev {left: 25%;}
